@@ -108,8 +108,8 @@ def accuracy_score_CotEval(answers, predictions):
                     if flag:
                         correct_count += 1
             else:
-                if "A" in answer or "B" in answer or "C" in answer or "D" in answer:
-                    answer = answer.split()
+                if "A" in answer or "B" in answer or "C" in answer or "D" in answer or "E" in answer:
+                    answer = answer.split(";")
                     prediction = prediction.split(";")
                     if len(answer) == len(prediction):
                         if set(answer) == set(prediction):
